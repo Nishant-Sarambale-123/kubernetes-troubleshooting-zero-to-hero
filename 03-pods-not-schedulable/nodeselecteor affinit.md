@@ -1,3 +1,13 @@
+NodeAffinity is part of Kubernetes scheduling that allows you to control which nodes a pod should run on.
+You attach rules based on node labels.
+
+requiredDuringScheduling → Pod will run only on nodes that match the rule
+
+preferredDuringScheduling → Pod will try to run on matching nodes, but can fall back to others
+
+This is used for things like sending pods to specific zones, high-memory nodes, GPU nodes, or dedicated workloads.
+
+
 Great write-up 👍 You’ve basically listed the **main scheduling constraints** in Kubernetes:
 
 * **NodeSelector** → simple, direct key=value match.
